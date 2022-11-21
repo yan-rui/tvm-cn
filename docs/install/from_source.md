@@ -5,8 +5,8 @@ sidebar_position: 1
 
 在各种系统中从 0 到 1 构建和安装 TVM 软件包包括两个步骤：
 
-1.  从 C++ 代码中构建共享库（Linux：\`libtvm.so\`；macOS
-    ：\`libtvm.dylib\`；Windows：\`libtvm.dll\`）。
+1.  从 C++ 代码中构建共享库（Linux：`libtvm.so`；macOS
+    ：`libtvm.dylib`；Windows：`libtvm.dll`）。
 2.  为编程语言包进行设置（如 Python 包）。
 
 下载 TVM 源代码，请访问 [下载页面](https://tvm.apache.org/download)。
