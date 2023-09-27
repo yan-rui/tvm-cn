@@ -31,7 +31,8 @@ title: 设计与架构
 **IRModule** 是整个堆栈中使用的主要数据结构。一个 IRModule（intermediate representation module）包含一组函数。目前支持两种主要的功能变体（variant）：
 
 * **relay::Function** 是一种高级功能程序表示。一个 relay.Function 通常对应一个端到端的模型。可将 relay.Function 视为额外支持控制流、递归和复杂数据结构的计算图。
-* **tir::PrimFunc** 是一种底层程序表示，包含循环嵌套选择、多维加载/存储、线程和向量/张量指令的元素。通常用于表示算子程序，这个程序在模型中执行一个（可融合的）层。 在编译期间，Relay 函数可降级为多个 tir::PrimFunc 函数和一个调用这些 tir::PrimFunc 函数的顶层函数。
+* **tir::PrimFunc** 是一种底层程序表示，包含循环嵌套选择、多维加载/存储、线程和向量/张量指令的元素。通常用于表示算子程序，这个程序在模型中执行一个（可融合的）层。
+* 在编译期间，Relay functions 可降级为多个 tir::PrimFunc 函数和一个调用这些 tir::PrimFunc 函数的顶层函数。
 
 ### 转换
 
